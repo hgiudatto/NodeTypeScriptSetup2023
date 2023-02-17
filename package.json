@@ -1,0 +1,19 @@
+{
+  "name": "nodetypescriptsetup2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hgiudatto/NodeTypeScriptSetup2023.git"
+  },
+  "author": "hgiudatto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hgiudatto/NodeTypeScriptSetup2023/issues"
+  },
+  "homepage": "https://github.com/hgiudatto/NodeTypeScriptSetup2023#readme"
+}
