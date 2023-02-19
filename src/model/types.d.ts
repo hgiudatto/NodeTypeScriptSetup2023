@@ -1,3 +1,5 @@
+import { type } from "os";
+
 export interface User {
   readonly dbId: number;
   email: string;
@@ -10,3 +12,11 @@ export interface User {
 export interface User {
   gitHubToken: string;
 }
+
+export type Animal = {
+  name: string;
+};
+
+export type Bear = Animal & {
+  food: "honey" | "hazelnuts";
+};
