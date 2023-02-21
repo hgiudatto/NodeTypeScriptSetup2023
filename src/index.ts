@@ -28,7 +28,7 @@ console.log(
 );
 
 class Usuario {
-  private _courseCount = 1;
+  protected _courseCount = 1;
   readonly city: string = "Buenos Aires";
 
   constructor(public email: string, public name: string) {}
@@ -50,6 +50,13 @@ class Usuario {
       throw new Error("Course count should be higher than 1.");
     }
     this._courseCount = courseNum;
+  }
+}
+
+class UsuarioBeta extends Usuario {
+  isFamily: boolean = true;
+  changeCourseCount() {
+    this._courseCount = 5;
   }
 }
 
