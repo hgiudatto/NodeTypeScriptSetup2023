@@ -28,22 +28,34 @@ console.log(
 );
 
 class Usuario {
-  email: string;
-  name: string;
-  city: string;
+  private _courseCount = 1;
+  readonly city: string = "Buenos Aires";
 
-  constructor(email: string, name: string) {
-    this.city = "";
-    this.email = email;
-    this.name = name;
+  constructor(public email: string, public name: string) {}
+
+  private deleteToken() {
+    console.log("Token deleted.");
+  }
+
+  get AppleEmail(): string {
+    return `apple${this.email}`;
+  }
+
+  get courseCount(): number {
+    return this._courseCount;
+  }
+
+  set courseCount(courseNum: number) {
+    if (courseNum <= 1) {
+      throw new Error("Course count should be higher than 1.");
+    }
+    this._courseCount = courseNum;
   }
 }
 
 const hector = new Usuario("hgiuda@gmail.com", "Hector");
-hector.city = "Buenos Aires";
 console.log(hector);
 
 const priamo = new Usuario("priamos@gmail.com", "Priamo");
 priamo.email = "priamo-troy@gmail.com";
-priamo.city = "Troy";
 console.log(priamo);
