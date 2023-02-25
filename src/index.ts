@@ -1,5 +1,5 @@
-import fs from "fs";
 import { User, Animal, Bear } from "./model/types";
+import { youTubeActionManager } from "./second";
 
 const achilles: User = {
   dbId: 22,
@@ -66,3 +66,8 @@ console.log(hector);
 const priamo = new Usuario("priamos@gmail.com", "Priamo");
 priamo.email = "priamo-troy@gmail.com";
 console.log(priamo);
+
+let msg: string = "First You Tube video published OK";
+const youTubeVideo = youTubeActionManager(msg);
+youTubeVideo.createStory();
+console.log(youTubeVideo);
